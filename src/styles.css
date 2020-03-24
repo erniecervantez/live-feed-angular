@@ -1,0 +1,88 @@
+
+/* Global Reset & Standards
+-------------------------------------------------------------- *
+/* 
+    Eric Meyer's CSS Reset
+    http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126
+    License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video { margin: 0; padding: 0; border: 0; font: inherit; vertical-align: baseline; }
+html, body { width: 100%; height: 100%; margin-top: 0 !important; padding-bottom: 0 !important; -webkit-text-size-adjust: none; }
+html { font-size: 62.5%; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section { display: block; }
+body { margin: 0; line-height: 1; -webkit-font-smoothing: antialiased; }
+ol, ul { list-style: none; }
+button { padding: 4px 20px; font-size: 12px; cursor: pointer; box-shadow: none; border: 2px solid #000; border-radius: 20px; outline: none; resize: none; -webkit-appearance: none; -webkit-font-smoothing: antialiased; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; -webkit-transition: all 0.25s ease-in-out; }
+button:hover { color: #fff; background: #000; }
+.hide { display: none; }
+
+#live-feed { width: 100%; height: 100vh; padding: 0 10px; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; background: #fff; }
+#live-feed .controls { position: absolute; top: 20px; left: 20px; opacity: 0; transition: all 0.25s ease-in-out; -moz-transition: all 0.25s ease-in-out; -webkit-transition: all 0.25s ease-in-out; z-index: 2; }
+#live-feed:hover .controls { opacity: 1; }
+#live-feed #images { height: 100vh; display: flex; flex-wrap: wrap; }
+#live-feed .image { width: 25%; height: 33.33vh; display: flex; position: relative; border: 20px solid transparent; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; align-items: center; }
+#live-feed .image.ad { opacity: 0; }
+#live-feed .image.ad-2 { width: 50%; }
+#live-feed .image.ad-3 { width: 75%; }
+#live-feed .image.ad-4 { width: 100%; }
+#live-feed .image img { max-width: 100%; max-height: 100%; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+#live-feed:fullscreen .controls { opacity: 0; }
+
+.loader { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); }
+.loader img { width: 128px; }
+
+/* Firefox Specific Rules
+-------------------------------------------------------------- */
+@-moz-document url-prefix() {
+  img:-moz-loading { visibility: hidden; }
+}
+
+/* Responsive - Desktop
+-------------------------------------------------------------- */
+@media only screen and (min-width: 1027px) {
+
+}
+
+/* Responsive - Tablet Landscape
+-------------------------------------------------------------- */
+@media only screen and (max-width: 1026px) {
+
+}
+
+/* Responsive - Tablet Portrait
+-------------------------------------------------------------- */
+@media only screen and (max-width: 768px) {
+}
+
+/* Responsive - Mobile Landscape
+-------------------------------------------------------------- */
+@media only screen and (max-width: 667px) {
+
+}
+
+/* Responsive - Mobile Portrait
+-------------------------------------------------------------- */
+@media only screen and (max-width: 479px) {
+  #live-feed .controls { display: none; }
+
+  #live-feed { padding: 0 5px; }
+  #live-feed .image { width: 50%; height: 20vh; border-width: 5px; }
+  #live-feed .image:nth-child(n+11) { display: none; }
+}
